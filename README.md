@@ -1,38 +1,29 @@
-# sv
+# 📖 Приложение с рецептами
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Простое веб-приложение для просмотра рецептов, созданное на **Svelte** в целях ознакомления с технологией.
 
-## Creating a project
+Вы можете **форкнуть** репозиторий и обновить список рецептов: src/lib/data/recipes.json
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🛠 Стек технологий
 
-```sh
-# create a new project in the current directory
-npx sv create
+- [Svelte](https://svelte.dev/) + [shadcn-svelte](https://www.shadcn-svelte.com/) — для разработки интерфейса и UI-компонентов
+- GitHub Actions + GitHub Pages — для автоматической сборки, деплоя и хостинга
 
-# create a new project in my-app
-npx sv create my-app
-```
+### 🚀 Деплой на GitHub Pages
 
-## Developing
+Для автоматической выкладки используется GitHub Actions.  
+Workflow находится по пути: .github/workflows/deploy.yml
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+В настройках репозитория (**Settings → Pages**) необходимо включить публикацию с помощью GitHub Actions.
 
-```sh
+### 📦 Локальный запуск
+
+```bash
+# Установка зависимостей
+npm install
+
+# Запуск dev-сервера
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+> Примечание: выкладка на GitHub Pages происходит автоматически после пуша в ветку master.
+Если вы используете другую ветку — обновите её название в файле .github/workflows/deploy.yml
